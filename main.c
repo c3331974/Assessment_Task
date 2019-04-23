@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-
+int Rotation_Cipher(word);
+int Subsitution_Cipher(word);
 
 int main()
 {
@@ -12,5 +13,19 @@ int main()
     printf("What is your word? ");
     scanf('%s', &word);
     
-    
+    //This block of code will be used to to determin which cipher the user wants to use.
+    printf("What Cipher do you want? (1) Rotation Cipher.... (2) Subsitution Cipher");
+    int decision;
+    scanf("%d", &decision);
+    switch(decision)
+    {
+        case 1:
+        Rotation_cipher(word);
+        case 2:
+        Subsition_cipher(word);
+        default:
+        printf("Incorrect choice. Restart program.");
+        
+    }
+
 }
