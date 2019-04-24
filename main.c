@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-void Rotation_Cipher(char word);
-void Subsitution_Cipher(char word);
+void Rotation_Cipher(char word, int limit);
 
 int main()
 {
@@ -16,26 +15,28 @@ top:
     
     
     //This block of code will be used to to determin which cipher the user wants to use.
-    printf("What Cipher do you want? (1) Rotation Cipher.... (2) Subsitution Cipher");
+    printf("What Cipher do you want? (1) Rotation Cipher.... (2) Subsitution Cipher ");
     int decision;
     scanf("%d", &decision);
     
     if (decision == 1){
-        Rotation_cipher(word);
+        Rotation_cipher(word, limit);
         return 0;
     }else if(decision == 2){
         Subsitution_cipher(word);
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
-        goto top;
+        //goto top;
     }
 }
 
 
-void Rotation_cipher(char word)
+void Rotation_cipher(char word, int limit)
 {
-    
+    char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYXZ";/*This string will be used to
+    compare the letters of the word from the user in terms of their position on the ascii table*/
+   
 }
 
 void Subsitution_cipher(char word)
