@@ -18,7 +18,7 @@ restart:
    if (key > 25 || key < -25)
    {
        printf("The key is too large or small. Enter another key.");
-       //goto restart;
+       goto restart;
    }
    
    int loop_counter;
@@ -63,14 +63,13 @@ restart:
                }
            }
        }
-       printf("\n");
        
    }else if(choice == 2)//DECRYPTION
    {
        
    }else{
        printf("Incorrect choice. Try again.\n");
-       //goto restart;
+       goto restart;
    }     
 }
 
