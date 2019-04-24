@@ -18,7 +18,7 @@ restart:
    if (key > 25 || key < -25)
    {
        printf("The key is too large or small. Enter another key.");
-       goto restart;
+       //goto restart;
    }
    
    int loop_counter;
@@ -52,31 +52,26 @@ restart:
                    {
                        ascii_position_of_word = ascii_position_of_word - 26; //26 is the range of positions of the alphabet in the ascii table and this will bring the encrypted letter back to being in the alphabet.
                        letter = ascii_position_of_word;
-                       printf("%c\n", letter);
+                       printf("%c", letter);
+                       break;
                    }else
                    {
                        letter = ascii_position_of_word;
-                       printf("%c\n", letter);
+                       printf("%c", letter);
+                       break;
                    }
-                   
-                  
                }
            }
        }
-       
-       
-       
+       printf("\n");
        
    }else if(choice == 2)//DECRYPTION
    {
        
-   }else
-   {
+   }else{
        printf("Incorrect choice. Try again.\n");
-       goto restart;
-   }
-    
-       
+       //goto restart;
+   }     
 }
 
 

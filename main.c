@@ -26,6 +26,6 @@ top:
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
-        goto top;
+        //goto top;
     }
 }
