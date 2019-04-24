@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-void Rotation_Cipher(char word, int limit);
+#include "Function.h"
 
 int main()
 {
@@ -20,58 +19,13 @@ top:
     scanf("%d", &decision);
     
     if (decision == 1){
-        Rotation_cipher(word, limit);
+        Rotation_Cipher(word, limit);
         return 0;
     }else if(decision == 2){
-        Subsitution_cipher(word);
+        Subsitution_Cipher(word);
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
-        //goto top;
+       // goto top;
     }
 }
-
-
-void Rotation_cipher(char word[], int limit)
-{
-   char alphabet[] = "abcdefghijklmnopqrstuvwxyz";/*This string will be used to
-   compare the letters of the word from the user in terms of their position on the ascii table*/
-  
-restart:
-   //This block of code is to get user input for the cipher process.
-   printf("What is the key");
-   int key;
-   scanf("%d", &key);
-   int choice;
-   printf("Would you like to: (1) Encrypt or (2) Decrypt ");
-   scanf("%d", &choice);
- 
-   //The following code is the cipher process based on whether it is an encryption or decryption.
-   if (choice == 1)
-   {
-       
-   }else if(choice == 2)
-   {
-       
-   }else
-   {
-       printf("Incorrect choice. Try again.\n");
-       //goto restart;
-   }
-    
-       
-}
-
-void Subsitution_cipher(char word)
-{
-    
-}
-
-
-
-
-
-
-
-
-
