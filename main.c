@@ -22,10 +22,10 @@ top:
         Rotation_Cipher(word, limit);
         return 0;
     }else if(decision == 2){
-        Subsitution_Cipher(word);
+        Subsitution_Cipher(word, limit);
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
-       // goto top;
+        goto top;
     }
 }
