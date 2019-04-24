@@ -27,7 +27,7 @@ top:
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
-        goto top;
+        //goto top;
     }
 }
 
@@ -37,12 +37,12 @@ void Rotation_cipher(char word[], int limit)
    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";/*This string will be used to
    compare the letters of the word from the user in terms of their position on the ascii table*/
   
-  restart:
+restart:
    //This block of code is to get user input for the cipher process.
-   int key;
    printf("What is the key");
+   int key;
    scanf("%d", &key);
-   int choice:
+   int choice;
    printf("Would you like to: (1) Encrypt or (2) Decrypt ");
    scanf("%d", &choice);
  
@@ -55,8 +55,8 @@ void Rotation_cipher(char word[], int limit)
        
    }else
    {
-       printf("Incorrect choice. Try again.\n")
-       goto restart;
+       printf("Incorrect choice. Try again.\n");
+       //goto restart;
    }
     
        
