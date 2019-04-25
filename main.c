@@ -3,7 +3,7 @@
 
 int main()
 {
-//top:
+top:
     //This block of code will be used to obtain user input for the program.
     printf("How many letters do you have in your word? ");
     int limit;
@@ -26,6 +26,6 @@ int main()
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
-        //goto top;
+        goto top;
     }
 }

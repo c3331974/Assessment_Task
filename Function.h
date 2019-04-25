@@ -5,7 +5,7 @@ void Rotation_Cipher(char word[], int limit)
    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";/*This string will be used to
    compare the letters of the word from the user in terms of their position on the ascii table*/
   
-//restart:
+restart:
    //This block of code is to get user input for the cipher process.
    printf("What is the key ");
    int key;
@@ -18,7 +18,7 @@ void Rotation_Cipher(char word[], int limit)
    if (key > 25 || key < -25)
    {
        printf("The key is too large or small. Enter another key.");
-       //goto restart;
+       goto restart;
    }
    
    int loop_counter;
@@ -110,7 +110,7 @@ void Rotation_Cipher(char word[], int limit)
        }
    }else{
        printf("Incorrect choice. Try again.\n");
-       //goto restart;
+       goto restart;
    }     
 }
 
