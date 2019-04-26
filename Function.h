@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void Rotation_Cipher(char word[], int limit)
 {
@@ -7,12 +8,30 @@ void Rotation_Cipher(char word[], int limit)
   
 restart:
    //This block of code is to get user input for the cipher process.
-   printf("What is the key ");
-   int key;
-   scanf("%d", &key);
+   printf("Do you have a key? (1) yes (2) no");
+   int key_choice;
+   scanf("%d", &key_choice);
+   if(key_choice == 1)
+   {
+       printf("What is the key ");
+       int key;
+       scanf("%d", &key);
+   }else
    int choice;
    printf("Would you like to: (1) Encrypt or (2) Decrypt ");
    scanf("%d", &choice);
+   
+   
+   if(key_choice == 2 && choice == 2)
+   {
+       int w_length = 
+   }
+   
+   
+   
+   
+   
+   
    
    //This block of code is to determine whether the key is appropriate.
    if (key > 25 || key < -25)
@@ -115,7 +134,7 @@ restart:
 }
 
 
-void Subsitution_Cipher(char word[], int limit)
+void Substitution_Cipher(char word[], int limit)
 {
     char alphabet[] =     "abcdefghijklmnopqrstuvwxyz";
 	char sub_alphabet[] = "aklmbrpoituyqwszxvncefjgdh";//This string will be used as the subsitutuion of the normal alphabet

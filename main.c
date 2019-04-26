@@ -12,7 +12,6 @@ top:
     printf("What is your word: ");
     scanf("%s", word);
     
-    
     //This block of code will be used to to determin which cipher the user wants to use.
     printf("What Cipher do you want? (1) Rotation Cipher.... (2) Subsitution Cipher ");
     int decision;
@@ -22,7 +21,7 @@ top:
         Rotation_Cipher(word, limit);
         return 0;
     }else if(decision == 2){
-        Subsitution_Cipher(word, limit);
+        Substitution_Cipher(word, limit);
         return 0;
     }else{
         printf("Incorrect choice. Restart program.\n");
