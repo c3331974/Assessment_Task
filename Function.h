@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 #include "Words.h"
+#include "Rotation_Cipher_No_Key.h"
 
 void Rotation_Cipher(char word[], int limit)
 {
@@ -25,10 +25,7 @@ restart:
    
    if(key_choice == 2 && choice == 2)
    {
-       int w_length = strlen(word);
-       int wl_length = strlen(common_words);
-       
-       
+       Rotation_Cipher_no_Key(word, alphabet, w_length);
    }
    
    

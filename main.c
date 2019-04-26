@@ -28,7 +28,8 @@ top:
        default:
        if(decision > 2 || decision < 1)
        {
-           break;
+           printf("incorrect decision. Restart program.");
+           goto top;
        }
    }  
 }
