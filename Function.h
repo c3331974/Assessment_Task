@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "Words.h"
 
 void Rotation_Cipher(char word[], int limit)
 {
@@ -11,12 +12,12 @@ restart:
    printf("Do you have a key? (1) yes (2) no");
    int key_choice;
    scanf("%d", &key_choice);
+   int key;
    if(key_choice == 1)
    {
        printf("What is the key ");
-       int key;
        scanf("%d", &key);
-   }else
+   }
    int choice;
    printf("Would you like to: (1) Encrypt or (2) Decrypt ");
    scanf("%d", &choice);
@@ -24,7 +25,8 @@ restart:
    
    if(key_choice == 2 && choice == 2)
    {
-       int w_length = 
+       int w_length = strlen(word);
+       
    }
    
    
@@ -37,7 +39,7 @@ restart:
    if (key > 25 || key < -25)
    {
        printf("The key is too large or small. Enter another key.");
-       goto restart;
+       //goto restart;
    }
    
    int loop_counter;
@@ -129,7 +131,7 @@ restart:
        }
    }else{
        printf("Incorrect choice. Try again.\n");
-       goto restart;
+       //goto restart;
    }     
 }
 
@@ -191,7 +193,7 @@ start:
 	}else
 	{
 	    printf("Incorrect choice. Starting again.\n");
-	    goto start;
+	    //goto start;
 	}
 	
 }
