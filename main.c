@@ -16,15 +16,19 @@ top:
     printf("What Cipher do you want? (1) Rotation Cipher.... (2) Subsitution Cipher ");
     int decision;
     scanf("%d", &decision);
-    
-    if (decision == 1){
-        Rotation_Cipher(word, limit);
-        return 0;
-    }else if(decision == 2){
-        Substitution_Cipher(word, limit);
-        return 0;
-    }else{
-        printf("Incorrect choice. Restart program.\n");
-        //goto top;
-    }
+   
+   switch(decision)
+   {
+       case 1:
+       Rotation_Cipher(word, limit);
+       return 0;
+       case 2:
+       Substitution_Cipher(word, limit);
+       return 0;
+       default:
+       if(decision > 2 || decision < 1)
+       {
+           break;
+       }
+   }  
 }

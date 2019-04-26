@@ -26,6 +26,8 @@ restart:
    if(key_choice == 2 && choice == 2)
    {
        int w_length = strlen(word);
+       int wl_length = strlen(common_words);
+       
        
    }
    
