@@ -13,7 +13,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 	int ascii_alphabet;
 
 	for (key = 1; key < 26; key++)
-	{	
+	{
 		for (i = 0; i < w_length; i++)
 		{
 			ascii_word = word[i];
@@ -23,7 +23,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 
 				if (ascii_word == ascii_alphabet)
 				{
-					int q = j + key;
+					int q = j + 1;
 					if (q >= 26)
 					{
 						q = q - 26;
@@ -46,7 +46,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 					{
 						if (word[h] == four_letter_words[k] && word[h + 1] == four_letter_words[k + 1] && word[h + 2] == four_letter_words[k + 2] && word[h + 3] == four_letter_words[k + 3])
 						{
-							printf("%s is the decrypted word\n", word);
+							printf("%s is the decrypted word at key: %d\n", word, key);
 							return 0;
 						}
 					}
@@ -57,3 +57,13 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
     
 return 0; 
 }
+
+int Substitution_Cipher_no_Substitution()
+{
+    
+}
+
+
+
+
+
