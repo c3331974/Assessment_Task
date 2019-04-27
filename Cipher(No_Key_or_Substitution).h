@@ -38,7 +38,6 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 			}
 			if (i == (w_length - 1))
 			{
-				printf("%d %s\n", key, word);
 				int h;
 				for (h = 0; h < w_length; h++)
 				{
@@ -56,5 +55,5 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 		}
 	}
     
-    
+return 0; 
 }

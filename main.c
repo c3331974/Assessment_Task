@@ -48,7 +48,7 @@ top:
        if(decision > 2 || decision < 1)
        {
            printf("incorrect decision. Restart program.");
-           goto top;
+           //goto top;
        }
    }  
 }
