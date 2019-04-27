@@ -2,10 +2,19 @@
 #include <string.h>
 #include "Words.h"
 
+/*The function here will process the user's word and find any potential decrypted words.
+This is done by analysing the word's characters and finding the same one in the alphabet string below.
+Once the character is found in the alphabet string, the algorithm will rotate the alphabet string once and then make the character in 
+the user's word equal to that of the alphabet's rotated string. Once all the characters of the user's word has undergone this change once 
+the second algorithm will compare that changed word to all the words in the allocated list - governed by the amount of characters the user's
+word - inside the "Words.h" header file. If the changed word matches with one inside the allocated common words string then it will be 
+outputted as potential word for the user to see it. It will keep on doing this till the alphabet string has done a full rotation and the
+user's word is practically back to it's encrypted intial state. */
 int Rotation_Cipher_no_Key(char word[], int w_length)
 {
     char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
+    //This list of interger variables hold the length of the common words strings based on the amount of characters.
 	int two_list_length = strlen(two_letter_words);
 	int three_list_length = strlen(three_letter_words);
 	int four_list_length = strlen(four_letter_words);
@@ -16,23 +25,18 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 	int nine_list_length = strlen(nine_letter_words);
 	int ten_list_length = strlen(ten_letter_words);
 
-	int key = 1;
-	int i;
-	int j;
-	int ascii_word;
-	int ascii_alphabet;
+	int key = 1;//"key" is intialised to act as all keys that may potentialallybe the key that decryptes the user's encrypted word and will be a loop counter for the first loop.
+	int i;//"i" is initialised to be a loop counter for the second "for" loop and will 'pick' out a character of the user's word.
+	int j;//"j" is initialised to be a loop counter for the third loop. It will also 'pick' out a character of the alphabet.
 
 	for (key; key < 26; key++)
 	{
-		
 		for (i = 0; i < w_length; i++)
 		{
-			ascii_word = word[i];
 			for (j = 0; j < 26; j++)
 			{
-				ascii_alphabet = alphabet[j];
 
-				if (ascii_word == ascii_alphabet)
+				if (word[i] == alphabet[j])
 				{
 					int q = j + 1;
 					if (q >= 26)
