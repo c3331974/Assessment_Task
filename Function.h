@@ -1,39 +1,17 @@
 #include <stdio.h>
-#include "Words.h"
-#include "Rotation_Cipher_No_Key.h"
+#include <string.h>
 
-void Rotation_Cipher(char word[], int limit)
+void Rotation_Cipher(char word[], int limit, int key)
 {
    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";/*This string will be used to
    compare the letters of the word from the user in terms of their position on the ascii table*/
   
 restart:
-   //This block of code is to get user input for the cipher process.
-   printf("Do you have a key? (1) yes (2) no");
-   int key_choice;
-   scanf("%d", &key_choice);
-   int key;
-   if(key_choice == 1)
-   {
-       printf("What is the key ");
-       scanf("%d", &key);
-   }
-   int choice;
+   
    printf("Would you like to: (1) Encrypt or (2) Decrypt ");
+   int choice;
    scanf("%d", &choice);
-   
-   
-   if(key_choice == 2 && choice == 2)
-   {
-       Rotation_Cipher_no_Key(word, alphabet, w_length);
-   }
-   
-   
-   
-   
-   
-   
-   
+
    //This block of code is to determine whether the key is appropriate.
    if (key > 25 || key < -25)
    {

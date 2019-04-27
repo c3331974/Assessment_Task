@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Function.h"
+#include "Cipher(No_Key_or_Substitution).h"
 
 int main()
 {
@@ -16,11 +17,29 @@ top:
     printf("What Cipher do you want? (1) Rotation Cipher.... (2) Subsitution Cipher ");
     int decision;
     scanf("%d", &decision);
+    
+    //This block of code is to get user input for the cipher process.
+   printf("Do you have a key? (1) yes (2) no");
+   int key_choice;
+   scanf("%d", &key_choice);
+   int key;
+   if(key_choice == 1)
+   {
+       printf("What is the key ");
+       scanf("%d", &key);
+   }
+   
+   if(decision == 1 && key_choice == 2)
+   {
+       int w_length = strlen(word);
+       Rotation_Cipher_no_Key(word, w_length);
+       return 0;
+   }
    
    switch(decision)
    {
        case 1:
-       Rotation_Cipher(word, limit);
+       Rotation_Cipher(word, limit, key);
        return 0;
        case 2:
        Substitution_Cipher(word, limit);
