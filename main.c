@@ -18,37 +18,36 @@ top:
     int decision;
     scanf("%d", &decision);
     
-    //This block of code is to get user input for the cipher process.
-   printf("Do you have a key? (1) yes (2) no");
-   int key_choice;
-   scanf("%d", &key_choice);
-   int key;
-   if(key_choice == 1)
-   {
-       printf("What is the key ");
-       scanf("%d", &key);
-   }
-   
-   if(decision == 1 && key_choice == 2)
-   {
-       int w_length = strlen(word);
-       Rotation_Cipher_no_Key(word, w_length);
-       return 0;
-   }
-   
    switch(decision)
    {
-       case 1:
+    case 1:
+       printf("Do you have a key? (1) yes (2) no");
+       int key_choice;
+       scanf("%d", &key_choice);
+       int key;
+       if(key_choice == 1)
+       {
+           printf("What is the key ");
+           scanf("%d", &key);
+       }
+       if(decision == 1 && key_choice == 2)
+       {
+           int w_length = strlen(word);
+           Rotation_Cipher_no_Key(word, w_length);
+           return 0;
+       }
        Rotation_Cipher(word, limit, key);
        return 0;
-       case 2:
+    case 2:
        Substitution_Cipher(word, limit);
        return 0;
-       default:
+    default:
        if(decision > 2 || decision < 1)
        {
            printf("incorrect decision. Restart program.");
            //goto top;
        }
    }  
+    
+   
 }
