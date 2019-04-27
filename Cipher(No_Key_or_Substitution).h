@@ -69,7 +69,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == three_letter_words[k] && word[h + 1] == three_letter_words[k + 1] && word[h + 2] == three_letter_words[k + 2])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
@@ -78,7 +78,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == four_letter_words[k] && word[h + 1] == four_letter_words[k + 1] && word[h + 2] == four_letter_words[k + 2] && word[h + 3] == four_letter_words[k + 3])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
@@ -87,7 +87,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == five_letter_words[k] && word[h + 1] == five_letter_words[k + 1] && word[h + 2] == five_letter_words[k + 2] && word[h + 3] == five_letter_words[k + 3] && word[h + 4] == five_letter_words[k + 4])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
@@ -96,7 +96,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == six_letter_words[k] && word[h + 1] == six_letter_words[k + 1] && word[h + 2] == six_letter_words[k + 2] && word[h + 3] == six_letter_words[k + 3] && word[h + 4] == six_letter_words[k + 4] && word[h + 5] == six_letter_words[k + 5])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
@@ -105,7 +105,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == seven_letter_words[k] && word[h + 1] == seven_letter_words[k + 1] && word[h + 2] == seven_letter_words[k + 2] && word[h + 3] == seven_letter_words[k + 3] && word[h + 4] == seven_letter_words[k + 4] && word[h + 5] == seven_letter_words[k + 5] && word[h + 6] == seven_letter_words[k + 6])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 							}
 						}
 					case 8:
@@ -113,7 +113,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == eight_letter_words[k] && word[h + 1] == eight_letter_words[k + 1] && word[h + 2] == eight_letter_words[k + 2] && word[h + 3] == eight_letter_words[k + 3] && word[h + 4] == eight_letter_words[k + 4] && word[h + 5] == eight_letter_words[k + 5] && word[h + 6] == eight_letter_words[k + 6] && word[h + 7] == eight_letter_words[k + 7])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
@@ -122,7 +122,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == nine_letter_words[k] && word[h + 1] == nine_letter_words[k + 1] && word[h + 2] == nine_letter_words[k + 2] && word[h + 3] == nine_letter_words[k + 3] && word[h + 4] == nine_letter_words[k + 4] && word[h + 5] == nine_letter_words[k + 5] && word[h + 6] == nine_letter_words[k + 6] && word[h + 7] == nine_letter_words[k + 7] && word[h + 8] == nine_letter_words[k + 8])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
@@ -131,7 +131,7 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 						{
 							if (word[h] == ten_letter_words[k] && word[h + 1] == ten_letter_words[k + 1] && word[h + 2] == ten_letter_words[k + 2] && word[h + 3] == ten_letter_words[k + 3] && word[h + 4] == ten_letter_words[k + 4] && word[h + 5] == ten_letter_words[k + 5] && word[h + 6] == ten_letter_words[k + 6] && word[h + 7] == ten_letter_words[k + 7] && word[h + 8] == ten_letter_words[k + 8] && word[h + 9] == ten_letter_words[k + 9])
 							{
-								printf("%s is the decrypted word at key: %d\n", word, key);
+								printf("%s is a potential decrypted word at key: %d\n", word, key);
 								break;
 							}
 						}
