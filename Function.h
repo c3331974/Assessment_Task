@@ -131,17 +131,19 @@ start:
 	
 	if (user_choice == 1)/////ENCRYPTION
 	{
+	    //This nested for loop is used to analyse every single character of word and sub_alpahbet to then process for the use of the alphabet string in order to encrypt.
 	    for (i = 0; i < limit; i++)
 	    {
-		    ascii_position_of_word = word[i];
-		
+		    ascii_position_of_word = word[i];//This code converts a specific character of the user's word to it's position on the ascii table.
+		    
+		    //this for loop is used to analyse the sub_alphabet string for matches that will then be used to analyse the alphabet string.
 		    for (j = 0; j < 26; j++)
     		{
     			ascii_position_of_alphabet = alphabet[j];
     			if (ascii_position_of_word == ascii_position_of_alphabet)
     			{
-    				ascii_position_of_word = sub_alphabet[j];
-    				letter = ascii_position_of_word;
+    				ascii_position_of_word = sub_alphabet[j];//This code sets the ascii_position_of_word to the encrypted counter-part.
+    				letter = ascii_position_of_word;//This code converts the ascii position to it's allocated character.
     				printf("%c", letter);
     				break;
     			}

@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <string.h>
 #include "Words.h"
 
@@ -29,34 +29,37 @@ int Rotation_Cipher_no_Key(char word[], int w_length)
 	int i;//"i" is initialised to be a loop counter for the second "for" loop and will 'pick' out a character of the user's word.
 	int j;//"j" is initialised to be a loop counter for the third loop. It will also 'pick' out a character of the alphabet.
 
+    /*This is the start of the algorithm*/
 	for (key; key < 26; key++)
 	{
-		for (i = 0; i < w_length; i++)
+		for (i = 0; i < w_length; i++)//This for loop will 'pick' out a character of the user's word for the algorithm to work on.
 		{
-			for (j = 0; j < 26; j++)
+			for (j = 0; j < 26; j++)//This for loop will 'pick' out a character of the alphabet to compare to the character of the user's word and to then change the character of the user's word.
 			{
-
-				if (word[i] == alphabet[j])
+				if (word[i] == alphabet[j])//This conditions ensures the characters of both the user's word and the alphabet string is the same.
 				{
+				    //"q" is initialised to take the position of the same character in alphabet and rotate it once. if q is to large or too small then 26 will be added or subtracted since 26 is the range of the character in the alphabet string. 
 					int q = j + 1;
-					if (q >= 26)
-					{
+					if (q >= 26){
 						q = q - 26;
 					}
-					else if (q < 0)
-					{
+					else if (q < 0){
 						q = q + 26;
 					}
-					word[i] = alphabet[q];
+					word[i] = alphabet[q];//This simply makes the character in the user's word equal to the rotted character in the alphabet string.
 					break;
 				}
 			}
-			if (i == (w_length - 1))
+			//once the user's word's characters have all been rotated once it will then be processed in this algorithm that will find matches inised it's allocated word category based on the amount of characters of the word.
+			if (i == (w_length - 1))//This condition ensures that the code will executed when the user's word's characters have all been changed.
 			{
 				int h;
 				int k;
 				for (h = 0; h < w_length; h++)
 				{
+				    /*Essentially this switch statement divides all the sub algorthims by character length to reduce the time of execution.
+				    The structure of the code in each case statement is identical however the condition of each if statement is slightly altered to allow for the change in the amount of characters.
+				    What the condition means is if the first character of the user's word matches with a character inside the common words string then check if the other character that follow also match and if they do then print the word out as a potential decrypted word.*/
 					switch (w_length)
 					{
 					case 2:

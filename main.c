@@ -39,7 +39,7 @@ top:
        //The second "if" statement is to call the "Rotation_Cipher_no_Key" function if the user does not have a key but has an encrypted word.
        }else if(decision == 1 && key_choice == 2)
        {
-           int w_length = strlen(word);
+           int w_length = strlen(word);//This is to get the length of the string whuch will be used inside the "Rotation_Cipher_no_Key" function.
            Rotation_Cipher_no_Key(word, w_length);
            return 0;
        //The third "if" statement is for when the user inputs the incorrect option for whether they have a key or not. It will restart the program.
