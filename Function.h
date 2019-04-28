@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
-
+/*Essentially this Rotation_Cipher function takes a character from the user's word by using a for loop and then analysing the alhpabet
+string untill there is a character that matches that same character from the user's word. Once there is a match it the takes the ascii_position
+of the character from word and increase/decrease(based on the key) the position by the amount of the key making sure that the ascii_position 
+of the new character does not 'fall' out of the positions that represent the alphabet(if so it then increased/decreased by 26 which is the
+range of the alphabet). once this change has been made, a char variable then takes that value and converts it to a character which will then 
+be printed to the console. The amount of times this algorithm will execute will be equal to the amount of letters are in the user's word.*/
 void Rotation_Cipher(char word[], int limit, int key)
 {
    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";/*This string will be used to
@@ -112,7 +117,13 @@ restart:
    }     
 }
 
-
+/*This function works by using the principle of the algorithm used in the Rotation_Cipher algorthim however is slightly altered. A for loop 
+analyses the user's word and 'picks' out a character one by one to then compare to the alphabet string. This is done by taking the ascii
+position of both the user's word's character and the alphabet string and analysing the alphabet untill the ascii position are identical.
+If they are indentical, then the algorithm will take the index position of the alphabet string and place it into the sub_alphabet string and
+make the ascii position of the user's word's character equal to character of the sub_alhpabet string at the index position. Followed after is
+a conversion of the ascii position to a char variable which will then be printed to the console. The amount of times this algorithm will 
+ execute is based on the amount of character's of the user's word.*/
 void Substitution_Cipher(char word[], int limit)
 {
     char alphabet[] =     "abcdefghijklmnopqrstuvwxyz";
