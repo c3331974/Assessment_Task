@@ -116,7 +116,7 @@ restart:
 void Substitution_Cipher(char word[], int limit)
 {
     char alphabet[] =     "abcdefghijklmnopqrstuvwxyz";
-	char sub_alphabet[] = "aklmbrpoituyqwszxvncefjgdh";//This string will be used as the subsitutuion of the normal alphabet
+	char sub_alphabet[] = "AKLMBRPOITUYQWSZXVNCEFJGDH";//This string will be used as the subsitutuion of the normal alphabet
 	int ascii_position_of_word;
 	int ascii_position_of_alphabet;//ascii position of alphabet and word are used to compare and be analysed in terms of the sub alphabet string for the cipher to work.
 	int i;//loop counter for word
